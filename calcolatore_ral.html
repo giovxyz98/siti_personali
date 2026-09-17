@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcolatore RAL ⇄ Netto 2026</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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DuOVNq0LLXi8q3S03dHWdTeYFXONi54wv1x/y6dmsaHcNLLn+kIXEXmkIjuZD/W647GALFNefjb85Msd9jd74IlY48ag+fWxJpntnxefDr9Wm9RmUm83TU3U/qXd5gZllcaVhdbJoz7cEPLSFNZty8bgv/YoHnbJKLO6zwZMWaUxtEix/WN//qs/ez4M2O8Warr0fTz+4L2ALEvWPKO+dHXJiq7g14eSmaoTC/t3BD771M0LYlmyeUOaflrDewGJyPZ3gx83KSb1glLzzu+df8+yo+qVbN0698uUunWKoatklDl2og83hDwZkIis+YV6pbLoJ7GeCyoq71NcXJEwZPMG9yvCg82BlgOKF9OXf47TqwE11QWVf9Apf5g156GvPuesfPOa6oKnP4cWuf1d/9rDlxtCXg1IRF5apV4Jzf9RV3bEKhqhPp+gnIOUlN8hMmRQz6IMDg8HtHdroKle8Z4NucKa+0hceUYz1qFtfRsN6OhhXbky898spkWj0eRv3fsSmepcB3ek1OfuzfXwCESpgAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERJOj6nr3/zTilLY5ABGFABGFABNGi0ejlfgzkYRyBCMKACMKACMKACMKACMKACMKACMKACMKACMKACMKACMKACMKACPI/qFB3fAwDvJ0AAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,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DuOVNq0LLXi8q3S03dHWdTeYFXONi54wv1x/y6dmsaHcNLLn+kIXEXmkIjuZD/W647GALFNefjb85Msd9jd74IlY48ag+fWxJpntnxefDr9Wm9RmUm83TU3U/qXd5gZllcaVhdbJoz7cEPLSFNZty8bgv/YoHnbJKLO6zwZMWaUxtEix/WN//qs/ez4M2O8Warr0fTz+4L2ALEvWPKO+dHXJiq7g14eSmaoTC/t3BD771M0LYlmyeUOaflrDewGJyPZ3gx83KSb1glLzzu+df8+yo+qVbN0698uUunWKoatklDl2og83hDwZkIis+YV6pbLoJ7GeCyoq71NcXJEwZPMG9yvCg82BlgOKF9OXf47TqwE11QWVf9Apf5g156GvPuesfPOa6oKnP4cWuf1d/9rDlxtCXg1IRF5apV4Jzf9RV3bEKhqhPp+gnIOUlN8hMmRQz6IMDg8HtHdroKle8Z4NucKa+0hceUYz1qFtfRsN6OhhXbky898spkWj0eRv3fsSmepcB3ek1OfuzfXwCESpgAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERhAERJOj6nr3/zTilLY5ABGFABGFABNGi0ejlfgzkYRyBCMKACMKACMKACMKACMKACMKACMKACMKACMKACMKACMKACMKACPI/qFB3fAwDvJ0AAAAASUVORK5CYII=">
+<meta name="theme-color" content="#0d0d0d">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #141414;
+    --border: #242424;
+    --accent: #c8ff00;
+    --accent2: #ff6b35;
+    --text: #f0f0f0;
+    --muted: #666;
+    --mono: 'DM Mono', monospace;
+    --display: 'Syne', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 20% -10%, rgba(200,255,0,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 110%, rgba(255,107,53,0.05) 0%, transparent 60%);
+  }
+
+  .container {
+    width: 100%;
+    max-width: 720px;
+  }
+
+  header {
+    margin-bottom: 3rem;
+  }
+
+  .label-tag {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--text);
+  }
+
+  h1 span {
+    color: var(--accent);
+  }
+
+  .subtitle {
+    margin-top: 0.75rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .mode-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .mode-tab {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-bottom-color: var(--border);
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+
+  .mode-tab:first-child { border-right: none; }
+
+  .mode-tab:hover { color: var(--text); }
+
+  .mode-tab.active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(200,255,0,0.05);
+  }
+
+  .mode-tab:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
+
+  .input-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .field-row:last-child { margin-bottom: 0; }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .field label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .field input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+    width: 100%;
+    transition: border-color 0.15s;
+    outline: none;
+  }
+
+  .field input:focus {
+    border-color: var(--accent);
+  }
+
+  .field input.ral-input {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+  }
+
+  .field .prefix {
+    position: relative;
+  }
+
+  .field .prefix::before {
+    content: '€';
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 0.9rem;
+    pointer-events: none;
+  }
+
+  .field .prefix input {
+    padding-left: 1.6rem;
+  }
+
+  .seg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .seg button {
+    background: var(--bg);
+    border: none;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    padding: 0.65rem 0.5rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .seg button + button { border-left: 1px solid var(--border); }
+
+  .seg button:hover { color: var(--text); }
+
+  .seg button.active {
+    background: var(--accent);
+    color: #000;
+    font-weight: 500;
+  }
+
+  .seg button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
+
+  .btn {
+    width: 100%;
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 2px;
+    font-family: var(--display);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.15s;
+    text-transform: uppercase;
+  }
+
+  .btn:hover { background: #d4ff1a; }
+  .btn:active { transform: scale(0.99); }
+
+  .btn:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+  }
+
+  .mode-panel { display: none; }
+  .mode-panel.active { display: block; }
+
+  .alert {
+    display: none;
+    background: rgba(255,107,53,0.07);
+    border: 1px solid var(--accent2);
+    border-radius: 2px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  .alert.visible { display: block; }
+
+  .alert strong {
+    display: block;
+    color: var(--accent2);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .results {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .results.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .big-numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .big-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .big-card.primary {
+    border-color: var(--accent);
+  }
+
+  .big-card.primary::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .big-card .card-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .big-card .card-value {
+    font-family: var(--display);
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+  }
+
+  .big-card.secondary .card-value {
+    color: var(--text);
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+  }
+
+  .big-card .card-sub {
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+  }
+
+  .breakdown {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .breakdown-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    border-bottom: 1px solid rgba(36,36,36,0.6);
+    transition: background 0.1s;
+    gap: 1rem;
+  }
+
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-row:hover { background: rgba(255,255,255,0.02); }
+
+  .row-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .row-label strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .row-value {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .row-value.negative { color: var(--accent2); }
+  .row-value.positive { color: var(--accent); }
+  .row-value.neutral { color: var(--text); }
+
+  .breakdown-row.total-row {
+    background: rgba(200,255,0,0.04);
+    border-top: 1px solid var(--accent);
+  }
+
+  .breakdown-row.total-row .row-label strong { color: var(--accent); }
+  .breakdown-row.total-row .row-value { color: var(--accent); font-size: 1rem; }
+
+  .breakdown-row.ral-row .row-label strong { color: var(--accent); }
+  .breakdown-row.ral-row .row-value { color: var(--accent); }
+
+  .eff-rate {
+    margin-top: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .eff-rate span:last-child {
+    font-family: var(--display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  footer {
+    margin-top: 2rem;
+    font-size: 0.65rem;
+    color: #333;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 520px) {
+    .field-row { grid-template-columns: 1fr; }
+    .big-numbers { grid-template-columns: 1fr; }
+    .input-section { padding: 1.25rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="label-tag">// Calcolatore 2026</div>
+    <h1>RAL <span>⇄</span> Netto</h1>
+    <p class="subtitle">Scaglioni IRPEF 2026 · Cuneo fiscale · Addizionali regionali/comunali</p>
+  </header>
+
+  <div class="mode-tabs">
+    <button class="mode-tab active" id="tabRal" onclick="setModo('ral')">Da RAL a netto</button>
+    <button class="mode-tab" id="tabNetto" onclick="setModo('netto')">Da netto a RAL</button>
+  </div>
+
+  <div class="input-section">
+    <div class="mode-panel active" id="panelRal">
+      <div class="field-row">
+        <div class="field" style="grid-column: 1 / -1">
+          <label for="ral">RAL (Reddito Annuo Lordo)</label>
+          <div class="prefix">
+            <input type="number" class="ral-input" id="ral" placeholder="38000" min="0" step="500">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mode-panel" id="panelNetto">
+      <div class="field-row">
+        <div class="field" style="grid-column: 1 / -1">
+          <label for="netto">Netto mensile desiderato</label>
+          <div class="prefix">
+            <input type="number" class="ral-input" id="netto" placeholder="1900" min="0" step="50">
+          </div>
+        </div>
+        <div class="field" style="grid-column: 1 / -1">
+          <label>Mensilità</label>
+          <div class="seg">
+            <button type="button" id="mens13" class="active" onclick="setMensilita(13)">13 mensilità</button>
+            <button type="button" id="mens12" onclick="setMensilita(12)">12 mensilità</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="addReg">Add. Regionale</label>
+        <div class="prefix">
+          <input type="number" id="addReg" value="1.23" step="0.01" min="0" max="5">
+        </div>
+      </div>
+      <div class="field">
+        <label for="addCom">Add. Comunale</label>
+        <div class="prefix">
+          <input type="number" id="addCom" value="0.80" step="0.01" min="0" max="1">
+        </div>
+      </div>
+      <div class="field" style="justify-content: flex-end;">
+        <label>&nbsp;</label>
+        <button class="btn" onclick="calcola()">Calcola</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert" id="alert">
+    <strong id="alertTitle">Attenzione</strong>
+    <span id="alertBody"></span>
+  </div>
+
+  <div class="results" id="results">
+    <div class="big-numbers">
+      <div class="big-card primary">
+        <div class="card-label" id="card1Label">Netto Annuo</div>
+        <div class="card-value" id="card1Value">—</div>
+        <div class="card-sub" id="card1Sub">dopo tasse e contributi</div>
+      </div>
+      <div class="big-card secondary">
+        <div class="card-label" id="card2Label">Netto / 13ª mensilità</div>
+        <div class="card-value" id="card2Value">—</div>
+        <div class="card-sub" id="card2Sub">—</div>
+      </div>
+    </div>
+
+    <div class="breakdown">
+      <div class="breakdown-header">
+        <span>Voce</span>
+        <span>Importo annuo</span>
+      </div>
+      <div class="breakdown-row ral-row">
+        <div class="row-label"><strong>RAL Lorda</strong></div>
+        <div class="row-value" id="bRal">—</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="row-label"><strong>Contributi INPS</strong> <br>9,19% della RAL</div>
+        <div class="row-value negative" id="bInps">—</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="row-label"><strong>Imponibile fiscale</strong></div>
+        <div class="row-value neutral" id="bImp">—</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="row-label"><strong>IRPEF lorda</strong></div>
+        <div class="row-value negative" id="bIrpefLorda">—</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="row-label"><strong>Detrazione lavoro dip.</strong> <br>art. 13 TUIR</div>
+        <div class="row-value positive" id="bDetrLavoro">—</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="row-label"><strong>Ulteriore detrazione</strong> <br>ex-cuneo fiscale 2026</div>
+        <div class="row-value positive" id="bUltDetr">—</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="row-label"><strong>IRPEF netta</strong></div>
+        <div class="row-value negative" id="bIrpefNetta">—</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="row-label"><strong>Addizionale regionale</strong></div>
+        <div class="row-value negative" id="bAddReg">—</div>
+      </div>
+      <div class="breakdown-row">
+        <div class="row-label"><strong>Addizionale comunale</strong></div>
+        <div class="row-value negative" id="bAddCom">—</div>
+      </div>
+      <div class="breakdown-row total-row">
+        <div class="row-label"><strong>NETTO ANNUO</strong></div>
+        <div class="row-value" id="bNetto">—</div>
+      </div>
+    </div>
+
+    <div class="eff-rate">
+      <span>Aliquota effettiva totale (tasse + contributi)</span>
+      <span id="aliqEff">—</span>
+    </div>
+  </div>
+
+  <footer>
+    Calcolo indicativo basato su scaglioni IRPEF 2026 (23% / 33% / 43%) · Detrazioni art.13 TUIR · Ulteriore detrazione ex-cuneo (fascia 20k–40k) · INPS 9,19%<br>
+    Non tiene conto di: detrazioni famigliari, bonus, TFR, redditi aggiuntivi, regime forfettario, somma esente per redditi sotto 20.000 €.<br>
+    Il calcolo inverso è attendibile per RAL superiori a ~22.100 €.
+  </footer>
+</div>
+
+<script>
+  let modo = 'ral';
+  let mensilita = 13;
+
+  function fmt(n) {
+    return '€ ' + parseFloat(n).toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function calcolaNetto(RAL, aliquotaReg = 0.0123, aliquotaCom = 0.008) {
+    const INPS = RAL * 0.0919;
+    const imp = RAL - INPS;
+
+    let irpefLorda = 0;
+    if (imp <= 28000) {
+      irpefLorda = imp * 0.23;
+    } else if (imp <= 50000) {
+      irpefLorda = 28000 * 0.23 + (imp - 28000) * 0.33;
+    } else {
+      irpefLorda = 28000 * 0.23 + 22000 * 0.33 + (imp - 50000) * 0.43;
+    }
+
+    let detrLavoro = 0;
+    if (imp <= 15000) {
+      detrLavoro = 1955;
+    } else if (imp <= 28000) {
+      detrLavoro = 1910 + 1190 * (28000 - imp) / 13000;
+    } else if (imp <= 50000) {
+      detrLavoro = 1910 * (50000 - imp) / 22000;
+    }
+
+    let ulterioreDetr = 0;
+    if (imp > 20000 && imp <= 32000) {
+      ulterioreDetr = 1000;
+    } else if (imp > 32000 && imp <= 40000) {
+      ulterioreDetr = 1000 * (40000 - imp) / 8000;
+    }
+
+    const irpefNetta = Math.max(0, irpefLorda - detrLavoro - ulterioreDetr);
+    const addReg = imp * aliquotaReg;
+    const addCom = imp * aliquotaCom;
+    const netto = RAL - INPS - irpefNetta - addReg - addCom;
+
+    return {
+      netto,
+      mensile13: netto / 13,
+      mensile12: netto / 12,
+      dettaglio: { INPS, imp, irpefLorda, detrLavoro, ulterioreDetr, irpefNetta, addReg, addCom }
+    };
+  }
+
+  const RAL_MAX = 1000000;
+  const TOLLERANZA = 0.02;
+
+  function trovaRAL(nettoTarget, aliquotaReg, aliquotaCom) {
+    if (calcolaNetto(RAL_MAX, aliquotaReg, aliquotaCom).netto < nettoTarget) {
+      return { ok: false, causa: 'fuoriRange' };
+    }
+
+    let lo = 0;
+    let hi = RAL_MAX;
+    for (let i = 0; i < 200; i++) {
+      const mid = (lo + hi) / 2;
+      if (calcolaNetto(mid, aliquotaReg, aliquotaCom).netto < nettoTarget) {
+        lo = mid;
+      } else {
+        hi = mid;
+      }
+    }
+
+    const ral = (lo + hi) / 2;
+    const res = calcolaNetto(ral, aliquotaReg, aliquotaCom);
+    const scarto = Math.abs(res.netto - nettoTarget);
+
+    if (scarto > TOLLERANZA) {
+      const sotto = calcolaNetto(lo, aliquotaReg, aliquotaCom);
+      const sopra = calcolaNetto(hi, aliquotaReg, aliquotaCom);
+      return { ok: false, causa: 'discontinuita', ral, nettoSotto: sotto.netto, nettoSopra: sopra.netto };
+    }
+
+    return { ok: true, ral, res };
+  }
+
+  function setModo(m) {
+    modo = m;
+    document.getElementById('tabRal').classList.toggle('active', m === 'ral');
+    document.getElementById('tabNetto').classList.toggle('active', m === 'netto');
+    document.getElementById('panelRal').classList.toggle('active', m === 'ral');
+    document.getElementById('panelNetto').classList.toggle('active', m === 'netto');
+    nascondiRisultati();
+    document.getElementById(m === 'ral' ? 'ral' : 'netto').focus();
+  }
+
+  function setMensilita(n) {
+    mensilita = n;
+    document.getElementById('mens13').classList.toggle('active', n === 13);
+    document.getElementById('mens12').classList.toggle('active', n === 12);
+  }
+
+  function nascondiRisultati() {
+    document.getElementById('results').classList.remove('visible');
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('alert').classList.remove('visible');
+  }
+
+  function mostraAlert(titolo, corpo) {
+    document.getElementById('alertTitle').textContent = titolo;
+    document.getElementById('alertBody').textContent = corpo;
+    document.getElementById('alert').classList.add('visible');
+  }
+
+  function leggiAliquote() {
+    const reg = parseFloat(document.getElementById('addReg').value);
+    const com = parseFloat(document.getElementById('addCom').value);
+    return {
+      reg: Number.isFinite(reg) ? reg / 100 : 0.0123,
+      com: Number.isFinite(com) ? com / 100 : 0.008
+    };
+  }
+
+  function render(ral, res) {
+    const d = res.dettaglio;
+
+    if (modo === 'ral') {
+      document.getElementById('card1Label').textContent = 'Netto Annuo';
+      document.getElementById('card1Value').textContent = fmt(res.netto);
+      document.getElementById('card1Sub').textContent = 'dopo tasse e contributi';
+      document.getElementById('card2Label').textContent = 'Netto / 13ª mensilità';
+      document.getElementById('card2Value').textContent = fmt(res.mensile13);
+      document.getElementById('card2Sub').textContent = fmt(res.mensile12) + ' / 12 mensilità';
+    } else {
+      document.getElementById('card1Label').textContent = 'RAL necessaria';
+      document.getElementById('card1Value').textContent = fmt(ral);
+      document.getElementById('card1Sub').textContent = 'per il netto richiesto';
+      document.getElementById('card2Label').textContent = 'Netto Annuo';
+      document.getElementById('card2Value').textContent = fmt(res.netto);
+      document.getElementById('card2Sub').textContent = fmt(res.netto / mensilita) + ' × ' + mensilita + ' mensilità';
+    }
+
+    document.getElementById('bRal').textContent = fmt(ral);
+    document.getElementById('bInps').textContent = '− ' + fmt(d.INPS);
+    document.getElementById('bImp').textContent = fmt(d.imp);
+    document.getElementById('bIrpefLorda').textContent = '− ' + fmt(d.irpefLorda);
+    document.getElementById('bDetrLavoro').textContent = '+ ' + fmt(d.detrLavoro);
+    document.getElementById('bUltDetr').textContent = d.ulterioreDetr > 0 ? '+ ' + fmt(d.ulterioreDetr) : '€ 0,00';
+    document.getElementById('bIrpefNetta').textContent = '− ' + fmt(d.irpefNetta);
+    document.getElementById('bAddReg').textContent = '− ' + fmt(d.addReg);
+    document.getElementById('bAddCom').textContent = '− ' + fmt(d.addCom);
+    document.getElementById('bNetto').textContent = fmt(res.netto);
+
+    document.getElementById('aliqEff').textContent = ((ral - res.netto) / ral * 100).toFixed(1) + '%';
+
+    const el = document.getElementById('results');
+    el.style.display = 'block';
+    requestAnimationFrame(() => el.classList.add('visible'));
+  }
+
+  function calcola() {
+    document.getElementById('alert').classList.remove('visible');
+    const aliq = leggiAliquote();
+
+    if (modo === 'ral') {
+      const ral = parseFloat(document.getElementById('ral').value);
+      if (!Number.isFinite(ral) || ral <= 0) {
+        document.getElementById('ral').focus();
+        return;
+      }
+      if (ral < 22100) {
+        mostraAlert('Fuori dal range attendibile', 'Sotto i 22.100 € di RAL il calcolo non applica la somma esente IRPEF prevista per i redditi bassi, quindi il netto risulta sottostimato.');
+      }
+      render(ral, calcolaNetto(ral, aliq.reg, aliq.com));
+      return;
+    }
+
+    const nettoMensile = parseFloat(document.getElementById('netto').value);
+    if (!Number.isFinite(nettoMensile) || nettoMensile <= 0) {
+      document.getElementById('netto').focus();
+      return;
+    }
+
+    const target = nettoMensile * mensilita;
+    const esito = trovaRAL(target, aliq.reg, aliq.com);
+
+    if (!esito.ok && esito.causa === 'fuoriRange') {
+      nascondiRisultati();
+      mostraAlert('Netto fuori scala', 'Il netto richiesto supera quello ottenibile con una RAL di 1.000.000 €. Controlla l\'importo inserito.');
+      return;
+    }
+
+    if (!esito.ok && esito.causa === 'discontinuita') {
+      nascondiRisultati();
+      mostraAlert(
+        'Netto non ottenibile',
+        'Nessuna RAL produce esattamente questo netto: intorno a ' + fmt(esito.ral) +
+        ' di RAL scatta una detrazione che fa saltare il netto da ' + fmt(esito.nettoSotto) +
+        ' a ' + fmt(esito.nettoSopra) + ' annui. Scegli un netto fuori da questo intervallo.'
+      );
+      return;
+    }
+
+    if (esito.ral < 22100) {
+      mostraAlert('Fuori dal range attendibile', 'La RAL trovata è sotto i 22.100 €, dove il calcolo non applica la somma esente IRPEF prevista per i redditi bassi. Il risultato è indicativo.');
+    }
+
+    render(esito.ral, esito.res);
+  }
+
+  document.getElementById('ral').addEventListener('keydown', e => {
+    if (e.key === 'Enter') calcola();
+  });
+
+  document.getElementById('netto').addEventListener('keydown', e => {
+    if (e.key === 'Enter') calcola();
+  });
+
+  ['addReg', 'addCom'].forEach(id => {
+    document.getElementById(id).addEventListener('keydown', e => {
+      if (e.key === 'Enter') calcola();
+    });
+  });
+</script>
+</body>
+</html>
